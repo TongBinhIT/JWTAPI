@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using JWTAPI.Data;
 using JWTAPI.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace JWTAPI.Controllers
 {
+    [Authorize(Roles = UserRoles.Admin)]
     [Route("api/[controller]")]
     [ApiController]
     public class ModelAreasController : ControllerBase
