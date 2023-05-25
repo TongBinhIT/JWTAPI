@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using JWTAPI.Models;
 
 namespace JWTAPI.Data
 {
@@ -13,5 +14,7 @@ namespace JWTAPI.Data
         {
             base.OnModelCreating(builder);
         }
+        
+        public DbSet<JWTAPI.Models.ModelArea>? ModelArea { get; set; }
     }
 }
