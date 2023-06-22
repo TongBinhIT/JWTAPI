@@ -7,7 +7,8 @@ namespace JWTAPI.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
-        [Key] public int IdArea { get; set; }
+        [Key] 
+        public int IdArea { get; set; }
 
         [Required]
         [MaxLength(50)]
